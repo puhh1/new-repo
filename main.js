@@ -1,6 +1,5 @@
-const Task = require('./information/data.js');
+// Выбор действия и удаление
+const Task = require('./runned/Task.js');
 
-const suitsOfCards = require('./information/tasks');
-
-const task = new Task(tasks);
-const sortTask = task.task();
+// Данные Тасков
+const suitsOfTasks = require('./information/data.js');

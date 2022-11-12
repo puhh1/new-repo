@@ -1,11 +1,17 @@
-/*choiceAnAction(usersData, deck) {
-    if (readlineSync.keyInYN('Here is the layout of your cards. Would you like another one?')) {
-        let updatedUsersData = this.optionallyRaffle(usersData, deck);
-        this.myHand(updatedUsersData, deck);
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+readline.question('какое у вас время (в часах)?', time => {
+
+    if (time >= 6  && time < 12 ) {
+        console.log( 'Доброе утро' );
+    } else if (time >=  12 && time < 18 ) {
+        console.log( 'Добрый день' );
     } else {
-        this.checkResult(usersData);
+        console.log( 'Добрый вечер' );
     }
-}
 
- */
-
+    readline.close();
+});
