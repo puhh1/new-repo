@@ -3,12 +3,18 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
-readline.question('Вы сделали задание', answer => {
+readline.question('Вы сделали задание?', first_answer => {
 
-    if (answer = 1) {
-        console.log('Моло');
-    } else if (answer != 1) {
-        console.log('Добрый день');
+    if (first_answer = 1) {
+        readline.question('Хотите убрать его из списка?',
+                second_answer => {
+            if (second_answer = 1) {
+                
+            }
+                });
+    }
+    else {
+        console.log('0');
     }
     readline.close();
 });
