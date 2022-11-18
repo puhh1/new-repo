@@ -22,7 +22,7 @@ class Task {
             else {
                 let ans = Number(answer)
                 ratioOfTasks.delete(ans);
-                console.log(ratioOfTasks, 'Всё')
+                console.log(ratioOfTasks, 'Иди делай оставшиеся!')
                 rl.close();
             }});
     }
