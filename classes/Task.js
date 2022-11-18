@@ -16,14 +16,15 @@ class Task {
     choiceAnAction() {
         console.log(users.raffle())
         rl.question('Ты сделал задание? (number || n) Если сделал, то выбери номер задания который хочешь удалить.', answer => {
-            let ans = Number(answer)
-            ratioOfTasks.delete(ans);
-                console.log(ratioOfTasks, 'Всё')
             if (answer === 'n') {
                 console.log(users.raffle(),'ИДИ ДЕЛАЙ!!!');
             }
-            rl.close();
-        });
+            else {
+                let ans = Number(answer)
+                ratioOfTasks.delete(ans);
+                console.log(ratioOfTasks, 'Всё')
+                rl.close();
+            }});
     }
 }
 const users = new Task({
