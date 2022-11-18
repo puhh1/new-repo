@@ -1,17 +1,11 @@
-const readline = require('readline').createInterface({
+const readline = require('readline');
+
+const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-readline.question('какое у вас время (в часах)?', time => {
-
-    if (time >= 6  && time < 12 ) {
-        console.log( 'Доброе утро' );
-    } else if (time >=  12 && time < 18 ) {
-        console.log( 'Добрый день' );
-    } else {
-        console.log( 'Добрый вечер' );
-    }
-
-    readline.close();
+rl.question('What do you think of Node.js? ', (answer) => {
+    console.log('Thank you for your valuable feedback:', answer);
+    rl.close();
 });
