@@ -15,7 +15,7 @@ class Task {
 
     choiceAnAction() {
         console.log(users.raffle())
-        rl.question('Ты сделал задание? (y || n) Если сделал, то выбери номер задания который хочешь удалить.', answer => {
+        rl.question('Ты сделал задание? (number || n) Если сделал, то выбери номер задания который хочешь удалить.', answer => {
             let ans = Number(answer)
             ratioOfTasks.delete(ans);
                 console.log(ratioOfTasks, 'Всё')
